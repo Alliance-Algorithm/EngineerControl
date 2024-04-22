@@ -1,0 +1,4 @@
+source;share/hikcamera/local_setup.bash
+source;share/hikcamera/local_setup.dsv
+source;share/hikcamera/local_setup.sh
+source;share/hikcamera/local_setup.zsh

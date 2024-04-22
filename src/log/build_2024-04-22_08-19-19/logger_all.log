@@ -1,0 +1,234 @@
+[0.383s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--merge-install']
+[0.383s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=True, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7312259fb340>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7312259f8490>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7312259f8490>>, mixin_verb=('build',))
+[0.402s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.403s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.403s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.403s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.403s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/workspaces/Engineer_Visual/src'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.403s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'ignore'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'ignore_ament_install'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['colcon_pkg']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'colcon_pkg'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['colcon_meta']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'colcon_meta'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['ros']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'ros'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['cmake', 'python']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'cmake'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'python'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extensions ['python_setup_py']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvFGSdkLog) by extension 'python_setup_py'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extensions ['ignore', 'ignore_ament_install']
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'ignore'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'ignore_ament_install'
+[0.410s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extensions ['colcon_pkg']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'colcon_pkg'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extensions ['colcon_meta']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'colcon_meta'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extensions ['ros']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'ros'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extensions ['cmake', 'python']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'cmake'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'python'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extensions ['python_setup_py']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(MvSdkLog) by extension 'python_setup_py'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extensions ['ignore', 'ignore_ament_install']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extension 'ignore'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extension 'ignore_ament_install'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extensions ['colcon_pkg']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extension 'colcon_pkg'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extensions ['colcon_meta']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extension 'colcon_meta'
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extensions ['ros']
+[0.411s] Level 1:colcon.colcon_core.package_identification:_identify(ros2-hikcamera) by extension 'ros'
+[0.413s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2-hikcamera' with type 'ros.ament_cmake' and name 'hikcamera'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extensions ['ignore', 'ignore_ament_install']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extension 'ignore'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extension 'ignore_ament_install'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extensions ['colcon_pkg']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extension 'colcon_pkg'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extensions ['colcon_meta']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extension 'colcon_meta'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extensions ['ros']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(visual_exchange) by extension 'ros'
+[0.413s] DEBUG:colcon.colcon_core.package_identification:Package 'visual_exchange' with type 'ros.ament_cmake' and name 'visual_exchange'
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.413s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'cmake_args' from command line to 'None'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'cmake_target' from command line to 'None'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'cmake_clean_first' from command line to 'False'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'cmake_force_configure' from command line to 'False'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'ament_cmake_args' from command line to 'None'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.440s] Level 5:colcon.colcon_core.verb:set package 'hikcamera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.440s] DEBUG:colcon.colcon_core.verb:Building package 'hikcamera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/Engineer_Visual/src/build/hikcamera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/Engineer_Visual/src/install', 'merge_install': True, 'path': '/workspaces/Engineer_Visual/src/ros2-hikcamera', 'symlink_install': False, 'test_result_base': None}
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'cmake_args' from command line to 'None'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'cmake_target' from command line to 'None'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'cmake_clean_cache' from command line to 'False'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'cmake_clean_first' from command line to 'False'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'cmake_force_configure' from command line to 'False'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'ament_cmake_args' from command line to 'None'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'catkin_cmake_args' from command line to 'None'
+[0.444s] Level 5:colcon.colcon_core.verb:set package 'visual_exchange' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.444s] DEBUG:colcon.colcon_core.verb:Building package 'visual_exchange' with the following arguments: {'ament_cmake_args': None, 'build_base': '/workspaces/Engineer_Visual/src/build/visual_exchange', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/workspaces/Engineer_Visual/src/install', 'merge_install': True, 'path': '/workspaces/Engineer_Visual/src/visual_exchange', 'symlink_install': False, 'test_result_base': None}
+[0.448s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.453s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.453s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/Engineer_Visual/src/ros2-hikcamera' with build type 'ament_cmake'
+[0.453s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/Engineer_Visual/src/ros2-hikcamera'
+[0.458s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.458s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.458s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.476s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/Engineer_Visual/src/build/hikcamera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/hikcamera -- -j20 -l20
+[0.513s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/Engineer_Visual/src/build/hikcamera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/hikcamera -- -j20 -l20
+[0.534s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/Engineer_Visual/src/build/hikcamera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/hikcamera
+[0.541s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hikcamera)
+[0.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/Engineer_Visual/src/build/hikcamera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/hikcamera
+[0.547s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake module files
+[0.547s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake config files
+[0.547s] Level 1:colcon.colcon_core.shell:create_environment_hook('hikcamera', 'cmake_prefix_path')
+[0.551s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/cmake_prefix_path.ps1'
+[0.552s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/cmake_prefix_path.dsv'
+[0.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/cmake_prefix_path.sh'
+[0.553s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib'
+[0.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('hikcamera', 'ld_library_path_lib')
+[0.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/ld_library_path_lib.ps1'
+[0.557s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/ld_library_path_lib.dsv'
+[0.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/ld_library_path_lib.sh'
+[0.557s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[0.557s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/pkgconfig/hikcamera.pc'
+[0.559s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/python3.10/site-packages'
+[0.559s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[0.563s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.ps1'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.dsv'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.sh'
+[0.564s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.bash'
+[0.565s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.zsh'
+[0.565s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/Engineer_Visual/src/install/share/colcon-core/packages/hikcamera)
+[0.585s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hikcamera)
+[0.589s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake module files
+[0.590s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake config files
+[0.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('hikcamera', 'cmake_prefix_path')
+[0.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/cmake_prefix_path.ps1'
+[0.594s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/cmake_prefix_path.dsv'
+[0.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/cmake_prefix_path.sh'
+[0.595s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib'
+[0.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('hikcamera', 'ld_library_path_lib')
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/ld_library_path_lib.ps1'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/ld_library_path_lib.dsv'
+[0.599s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/hikcamera/hook/ld_library_path_lib.sh'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/pkgconfig/hikcamera.pc'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/python3.10/site-packages'
+[0.600s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[0.604s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.ps1'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.dsv'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.sh'
+[0.605s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.bash'
+[0.606s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/hikcamera/package.zsh'
+[0.606s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/Engineer_Visual/src/install/share/colcon-core/packages/hikcamera)
+[0.606s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/workspaces/Engineer_Visual/src/visual_exchange' with build type 'ament_cmake'
+[0.606s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/workspaces/Engineer_Visual/src/visual_exchange'
+[0.611s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.611s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/Engineer_Visual/src/build/visual_exchange': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/visual_exchange -- -j20 -l20
+[5.321s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/Engineer_Visual/src/build/visual_exchange' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/visual_exchange -- -j20 -l20
+[5.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/workspaces/Engineer_Visual/src/build/visual_exchange': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/visual_exchange
+[5.343s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(visual_exchange)
+[5.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/workspaces/Engineer_Visual/src/build/visual_exchange' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/visual_exchange
+[5.348s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake module files
+[5.348s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake config files
+[5.348s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_exchange', 'cmake_prefix_path')
+[5.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/cmake_prefix_path.ps1'
+[5.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/cmake_prefix_path.dsv'
+[5.352s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/cmake_prefix_path.sh'
+[5.353s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib'
+[5.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_exchange', 'ld_library_path_lib')
+[5.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/ld_library_path_lib.ps1'
+[5.357s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/ld_library_path_lib.dsv'
+[5.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/ld_library_path_lib.sh'
+[5.357s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[5.357s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/pkgconfig/visual_exchange.pc'
+[5.357s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/python3.10/site-packages'
+[5.357s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[5.361s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.ps1'
+[5.361s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.dsv'
+[5.361s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.sh'
+[5.362s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.bash'
+[5.362s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.zsh'
+[5.362s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/Engineer_Visual/src/install/share/colcon-core/packages/visual_exchange)
+[5.382s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(visual_exchange)
+[5.386s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake module files
+[5.386s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install' for CMake config files
+[5.386s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_exchange', 'cmake_prefix_path')
+[5.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/cmake_prefix_path.ps1'
+[5.390s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/cmake_prefix_path.dsv'
+[5.390s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/cmake_prefix_path.sh'
+[5.390s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib'
+[5.391s] Level 1:colcon.colcon_core.shell:create_environment_hook('visual_exchange', 'ld_library_path_lib')
+[5.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/ld_library_path_lib.ps1'
+[5.395s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/ld_library_path_lib.dsv'
+[5.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/workspaces/Engineer_Visual/src/install/share/visual_exchange/hook/ld_library_path_lib.sh'
+[5.395s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[5.395s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/pkgconfig/visual_exchange.pc'
+[5.396s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/lib/python3.10/site-packages'
+[5.396s] Level 1:colcon.colcon_core.environment:checking '/workspaces/Engineer_Visual/src/install/bin'
+[5.400s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.ps1'
+[5.400s] INFO:colcon.colcon_core.shell:Creating package descriptor '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.dsv'
+[5.400s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.sh'
+[5.400s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.bash'
+[5.401s] INFO:colcon.colcon_core.shell:Creating package script '/workspaces/Engineer_Visual/src/install/share/visual_exchange/package.zsh'
+[5.401s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/workspaces/Engineer_Visual/src/install/share/colcon-core/packages/visual_exchange)
+[5.401s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.401s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.401s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.401s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.408s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[5.408s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.408s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.408s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.410s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[5.410s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.415s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/Engineer_Visual/src/install/local_setup.ps1'
+[5.416s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/Engineer_Visual/src/install/_local_setup_util_ps1.py'
+[5.416s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/Engineer_Visual/src/install/setup.ps1'
+[5.421s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/Engineer_Visual/src/install/local_setup.sh'
+[5.421s] INFO:colcon.colcon_core.shell:Creating prefix util module '/workspaces/Engineer_Visual/src/install/_local_setup_util_sh.py'
+[5.421s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/Engineer_Visual/src/install/setup.sh'
+[5.426s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/Engineer_Visual/src/install/local_setup.bash'
+[5.426s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/Engineer_Visual/src/install/setup.bash'
+[5.430s] INFO:colcon.colcon_core.shell:Creating prefix script '/workspaces/Engineer_Visual/src/install/local_setup.zsh'
+[5.430s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/workspaces/Engineer_Visual/src/install/setup.zsh'

@@ -1,0 +1,6 @@
+Invoking command in '/workspaces/Engineer_Visual/src/build/hikcamera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspaces/Engineer_Visual/src/ros2-hikcamera -DCMAKE_INSTALL_PREFIX=/workspaces/Engineer_Visual/src/install
+Invoked command in '/workspaces/Engineer_Visual/src/build/hikcamera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /workspaces/Engineer_Visual/src/ros2-hikcamera -DCMAKE_INSTALL_PREFIX=/workspaces/Engineer_Visual/src/install
+Invoking command in '/workspaces/Engineer_Visual/src/build/hikcamera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/hikcamera -- -j20 -l20
+Invoked command in '/workspaces/Engineer_Visual/src/build/hikcamera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/hikcamera -- -j20 -l20
+Invoking command in '/workspaces/Engineer_Visual/src/build/hikcamera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/hikcamera
+Invoked command in '/workspaces/Engineer_Visual/src/build/hikcamera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/hikcamera

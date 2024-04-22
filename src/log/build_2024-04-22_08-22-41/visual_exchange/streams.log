@@ -1,0 +1,29 @@
+[0.021s] Invoking command in '/workspaces/Engineer_Visual/src/build/visual_exchange': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/visual_exchange -- -j20 -l20
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target visual_exchange[0m
+[0.061s] [100%] Built target visual_exchange
+[0.068s] Invoked command in '/workspaces/Engineer_Visual/src/build/visual_exchange' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/visual_exchange -- -j20 -l20
+[0.083s] Invoking command in '/workspaces/Engineer_Visual/src/build/visual_exchange': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/visual_exchange
+[0.087s] -- Install configuration: ""
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/include
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/include/visual_exchange
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/include/util
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/include/util/fps_counter.hpp
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/lib/visual_exchange/visual_exchange
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/ament_index/resource_index/package_run_dependencies/visual_exchange
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/ament_index/resource_index/parent_prefix_path/visual_exchange
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/environment/ament_prefix_path.sh
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/environment/ament_prefix_path.dsv
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/environment/path.sh
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/environment/path.dsv
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/local_setup.bash
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/local_setup.sh
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/local_setup.zsh
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/local_setup.dsv
+[0.087s] -- Installing: /workspaces/Engineer_Visual/src/install/share/visual_exchange/package.dsv
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/ament_index/resource_index/packages/visual_exchange
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/cmake/visual_exchangeConfig.cmake
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/cmake/visual_exchangeConfig-version.cmake
+[0.087s] -- Up-to-date: /workspaces/Engineer_Visual/src/install/share/visual_exchange/package.xml
+[0.088s] Invoked command in '/workspaces/Engineer_Visual/src/build/visual_exchange' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/visual_exchange

@@ -1,0 +1,4 @@
+Invoking command in '/workspaces/Engineer_Visual/src/build/visual_exchange': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/visual_exchange -- -j20 -l20
+Invoked command in '/workspaces/Engineer_Visual/src/build/visual_exchange' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/Engineer_Visual/src/build/visual_exchange -- -j20 -l20
+Invoking command in '/workspaces/Engineer_Visual/src/build/visual_exchange': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/visual_exchange
+Invoked command in '/workspaces/Engineer_Visual/src/build/visual_exchange' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/Engineer_Visual/src/build/visual_exchange

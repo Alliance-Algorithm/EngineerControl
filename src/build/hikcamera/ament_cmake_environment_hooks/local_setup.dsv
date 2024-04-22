@@ -1,0 +1,3 @@
+source;share/hikcamera/environment/ament_prefix_path.sh
+source;share/hikcamera/environment/library_path.sh
+source;share/hikcamera/environment/path.sh

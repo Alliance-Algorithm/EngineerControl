@@ -1,0 +1,3 @@
+[submodule "src/ros2-hikcamera"]
+	path = src/ros2-hikcamera
+	url = https://github.com/Alliance-Algorithm/ros2-hikcamera

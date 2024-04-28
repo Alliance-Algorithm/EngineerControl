@@ -33,7 +33,7 @@ public:
     CV_P3P = cv::SOLVEPNP_P3P,
     CV_EPNP = cv::SOLVEPNP_EPNP,
     CV_SQPNP = cv::SOLVEPNP_SQPNP,
-    CV_IPPE = cv::SOLVEPNP_IPPE_SQUARE
+    CV_IPPESQ = cv::SOLVEPNP_IPPE_SQUARE
   };
 
   /***********************位姿估计所用特征点**************************/

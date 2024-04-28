@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <memory>
+#include <opencv2/videoio.hpp>
 #include <rclcpp/qos.hpp>
 #include <thread>
 

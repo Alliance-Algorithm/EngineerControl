@@ -39,7 +39,7 @@ int PNPSolver::Solve(METHOD method) {
     return -2;
   }
   if (method == METHOD::CV_P3P || method == METHOD::CV_ITERATIVE ||
-      method == METHOD::CV_IPPE) {
+      method == METHOD::CV_IPPESQ) {
     if (Points3D.size() != 4) {
       // printf("ErrCode:-2,使用CV_ITERATIVE或CV_"
       //        "P3P方法时输入的特征点数量应为4！\r\n");

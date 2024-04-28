@@ -1,4 +1,5 @@
 #pragma once
+#include <algorithm>
 #include <cmath>
 #include <complex>
 #include <cstddef>
@@ -28,7 +29,7 @@
 #include <string>
 #include <vector>
 
-#include "pnp_solver.hpp"
+#include "../include/pnp/pnp_solver.hpp"
 
 namespace EngineerVisual {
 
@@ -38,13 +39,17 @@ public:
 
     //初始化相机参数
 
-    pnpsolver.SetCameraMatrix(2783.51380399845, 2795.03600410101,
-                              1932.22472201653, 1153.49477364402);
+    pnpsolver.SetCameraMatrix(1.722231837421459e+03, 1.724876404292754e+03,
+                              7.013056440882832e+02, 5.645821718351237e+02);
     //设置畸变参数
-    pnpsolver.SetDistortionCoefficients(0.0407902477934583, -0.547170508860230,
-                                        0, 0, 1.72889744087393);
+    pnpsolver.SetDistortionCoefficients(-0.064232403853946, -0.087667493884102,
+                                        0, 0, 0.792381808294582);
+    for (int i = 0; i < 10; i++) {
+      filter.push({});
+    }
   };
   void Calculate(cv::Mat &image) {
+    original = cv::Mat(image);
     std::vector<cv::Mat> rois;
     Preprocessing(image);
     Processing(image);
@@ -54,16 +59,15 @@ public:
 
 private:
   void Preprocessing(cv::Mat &image) {
-    original = image.clone();
     // 颜色过滤
     std::vector<cv::Mat> rgb;
     cv::split(image, rgb);
-    image = rgb.at(2) - rgb.at(0);
+    // image = rgb.at(2) - rgb.at(0);
     // //转成灰度图片
-    // cv::img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY);
+    cv::cvtColor(image, image, cv::COLOR_BGR2GRAY);
     // #二值化
     //     ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY);
-    cv::threshold(image, image, 70, 255, cv::THRESH_BINARY);
+    cv::threshold(image, image, 127, 255, cv::THRESH_BINARY);
   };
 
   void GetLineIntersection(std::vector<Eigen::Vector3f> &l1,
@@ -88,26 +92,26 @@ private:
     cv::findContours(image, lightContours, cv::RETR_EXTERNAL,
                      cv::CHAIN_APPROX_SIMPLE);
 
-    // image = cv::Mat::zeros(image.size(), CV_8UC1); //绘制
-    // if (lightContours.size() > 0)
-    //   drawContours(image, lightContours, 0, cv::Scalar(255), 1, 8);
+    image = cv::Mat::zeros(image.size(), CV_8UC1); //绘制
+    for (auto i = 0lu; i < lightContours.size(); i++)
+      drawContours(image, lightContours, i, cv::Scalar(255), 1, 8);
     // 获取可能的区域
     cv::Size inflationSize(20, 20);
     std::vector<cv::Mat> rois_temp;
     std::vector<std::vector<cv::Point>> poly;
 
     for (auto cors : lightContours) {
-      if (cv::contourArea(cors) > 5000) {
+      if (cv::contourArea(cors) > 2000) {
         // cv::convexHull(cors, hull, false, true);
-        cv::approxPolyDP(cors, cors, cv::arcLength(cors, true) * 0.02, true);
+        cv::approxPolyDP(cors, cors, cv::arcLength(cors, true) * 0.013, true);
         poly.push_back(cors);
       }
     }
 
-    // for (auto k : poly) {
-    //   for (size_t i = 0, j = k.size(); i < j; i++) {
-    //     cv::line(original, k[i], k[(i + 1) % j], cv::Scalar(100, 255, 100),
-    //     10); cv::putText(original, std::to_string(i), k[i], 1, 3,Eigen
+    for (auto k : poly) {
+      for (size_t i = 0, j = k.size(); i < j; i++)
+        cv::line(image, k[i], k[(i + 1) % j], cv::Scalar(100, 255, 100), 10);
+    }
 
     // 取线
     std::vector<std::vector<Eigen::Vector3f>> lines;
@@ -125,10 +129,10 @@ private:
           l1 = (l1 + l2);
           l2 = Eigen::Vector3f(points[i % k].x, points[i % k].y, 0);
           lines.push_back({l2, l2 + l1});
-          cv::line(original, cv::Point(l2.x(), l2.y()),
+          cv::line(image, cv::Point(l2.x(), l2.y()),
                    cv::Point(l2.x() + l1.x(), l2.y() + l1.y()),
                    cv::Scalar(255, 200, 255), 4);
-          cv::circle(original, points[i % k], 20, cv::Scalar(255, 200, 255), 4);
+          cv::circle(image, points[i % k], 20, cv::Scalar(255, 200, 255), 4);
         }
       }
     }
@@ -154,75 +158,86 @@ private:
     if (times != 0)
       inters /= times;
 
-    cv::circle(original, cv::Point2f(inters.x(), inters.y()), 20,
-               cv::Scalar(150, 100, 255), -1);
-
     std::vector<cv::Point3f> input_world; //{cv::Point3f(0, 0, 0)};
     std::vector<cv::Point2f>
         input_camera; //{cv::Point2f(inters.x(), inters.y())};
-    if (lines.size() <= 3) {
-      input_world.push_back(cv::Point3f(0, 0, 0));
-      input_camera.push_back(cv::Point2f(inters.x(), inters.y()));
-    }
+    // if (lines.size() <= 3) {
+    //   input_world.push_back(cv::Point3f(0, 0, 0));
+    //   input_camera.push_back(cv::Point2f(inters.x(), inters.y()));
+    //   cv::circle(image, cv::Point2f(inters.x(), inters.y()), 20,
+    //              cv::Scalar(150, 100, 255), -1);
+    // }
     int last = -1;
     for (auto p : lines) {
       auto vec = p[1] - p[0];
       if (vec.x() < 0 && vec.y() < 0) {
-        input_world.push_back(worldpoints[3]);
-        input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
-        cv::putText(original, "2", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
+        // input_world.push_back(worldpoints[2]);
+        campoints[2] = cv::Point(p[0].x(), p[0].y());
+        // input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
+        cv::putText(image, "2", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
                     cv::Scalar(150, 100, 255));
         last = 3;
       } else if (vec.x() >= 0 && vec.y() < 0) {
-        input_world.push_back(worldpoints[1]);
-        input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
-        cv::putText(original, "1", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
+        // input_world.push_back(worldpoints[3]);
+        campoints[3] = cv::Point(p[0].x(), p[0].y());
+        // input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
+        cv::putText(image, "3", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
                     cv::Scalar(150, 100, 255));
         last = 1;
       } else if (vec.x() < 0 && vec.y() >= 0) {
-        input_world.push_back(worldpoints[2]);
-        input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
-        cv::putText(original, "3", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
+        // input_world.push_back(worldpoints[1]);
+        campoints[1] = cv::Point(p[0].x(), p[0].y());
+        // input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
+        cv::putText(image, "1", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
                     cv::Scalar(150, 100, 255));
         last = 2;
       } else {
-        input_world.push_back(worldpoints[0]);
-        input_camera.push_back(cv::Point(p[0].x(), p[0].y()));
-        cv::putText(original, "0", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
+        // input_world.push_back(worldpoints[0]);
+        campoints[0] = cv::Point(p[0].x(), p[0].y());
+        cv::putText(image, "0", cv::Point2f(p[0].x(), p[0].y()), 1, 5,
                     cv::Scalar(150, 100, 255));
         last = 0;
       }
     }
-    if (input_camera.size() == 3) {
-      input_camera.push_back(input_camera.front() * 2 - input_camera.back());
-      input_world.push_back(worldpoints[3 - last]);
+    // if (input_camera.size() == 3) {
+    //   input_camera.push_back(input_camera.front() * 2 - input_camera.back());
+    //   input_world.push_back(worldpoints[3 - last]);
+    // }
+    for (int i = 0; i < 4; i++) {
+      input_camera.push_back(campoints[i]);
+      input_world.push_back(worldpoints[i]);
     }
 
     pnpsolver.Points2D = input_camera;
     pnpsolver.Points3D = input_world;
-
-    if (pnpsolver.Solve(PNPSolver::METHOD::CV_P3P) == 0) {
+    // for (auto i : input_camera)
+    // cout << i << "\t'";
+    // cout << endl;
+    if (pnpsolver.Solve(PNPSolver::METHOD::CV_IPPE) == 0) {
 
       Eigen::Matrix3f r_eigen;
       cv::cv2eigen(pnpsolver.RoteM, r_eigen);
       rotate = Eigen::Quaternionf(r_eigen);
+
       position = Eigen::Vector3f(pnpsolver.Position_OcInW.x,
                                  pnpsolver.Position_OcInW.y,
                                  pnpsolver.Position_OcInW.z);
-      std::cout << "test2:CV_EPNP方法: 相机位姿→"
-                << "Oc坐标=" << pnpsolver.Position_OcInW
-                << "    相机旋转=" << pnpsolver.Theta_W2C << endl;
+      // std::cout << "test2:CV_EPNP方法: 相机位姿→"
+      //           << "Oc坐标=" << pnpsolver.Position_OcInW
+      //           << "    相机旋转=" << pnpsolver.Theta_W2C << endl;
     }
-    cv::imshow("Point of Contours",
-               original); //向量contours内保存的所有轮廓点集
-    cv::waitKey(10);
+    // cv::imshow("Point of Contours",
+    //            original); //向量contours内保存的所有轮廓点集
+    // cv::waitKey(10);
   }
   cv::Mat original;
   cv::Point3f worldpoints[4]{
-      cv::Point3f(0, 150, 150), cv::Point3f(0, 150, -150),
-      cv::Point3f(0, -150, 150), cv::Point3f(0, -150, -150)};
+      cv::Point3f(-125, 225, 0), cv::Point3f(125, 125, 0),
+      cv::Point3f(125, -125, 0), cv::Point3f(-125, -125, 0)};
+  cv::Point2f campoints[4]{};
   Eigen::Quaternionf rotate;
   Eigen::Vector3f position;
+  std::queue<Eigen::Quaternionf> filter;
   PNPSolver pnpsolver;
 };
 } // namespace EngineerVisual

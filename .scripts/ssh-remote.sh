@@ -1,0 +1,1 @@
+ssh alliance@10.147.20.5 "docker exec --it deploy_engineer bash"

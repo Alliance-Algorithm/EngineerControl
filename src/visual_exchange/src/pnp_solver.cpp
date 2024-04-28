@@ -1,5 +1,4 @@
-#include "pnp_solver.hpp"
-#include <opencv2/core/quaternion.hpp>
+#include "../include/pnp/pnp_solver.hpp"
 
 // 本类用于快速解决PNP问题，顺带解决空间绕轴旋转以及图像系、相机系、世界系三系坐标投影问题
 // 调用顺序：
@@ -39,7 +38,8 @@ int PNPSolver::Solve(METHOD method) {
     printf("ErrCode:-2，3D点数量与2D点数量不一致！\r\n");
     return -2;
   }
-  if (method == METHOD::CV_P3P || method == METHOD::CV_ITERATIVE) {
+  if (method == METHOD::CV_P3P || method == METHOD::CV_ITERATIVE ||
+      method == METHOD::CV_IPPE) {
     if (Points3D.size() != 4) {
       // printf("ErrCode:-2,使用CV_ITERATIVE或CV_"
       //        "P3P方法时输入的特征点数量应为4！\r\n");
@@ -82,11 +82,11 @@ int PNPSolver::Solve(METHOD method) {
   RoteM = cv::Mat(3, 3, CV_64FC1, rm);
   Rodrigues(rvec, RoteM);
   double r11 = RoteM.ptr<double>(0)[0];
-  double r12 = RoteM.ptr<double>(0)[1];
-  double r13 = RoteM.ptr<double>(0)[2];
+  // double r12 = RoteM.ptr<double>(0)[1];
+  // double r13 = RoteM.ptr<double>(0)[2];
   double r21 = RoteM.ptr<double>(1)[0];
-  double r22 = RoteM.ptr<double>(1)[1];
-  double r23 = RoteM.ptr<double>(1)[2];
+  // double r22 = RoteM.ptr<double>(1)[1];
+  // double r23 = RoteM.ptr<double>(1)[2];
   double r31 = RoteM.ptr<double>(2)[0];
   double r32 = RoteM.ptr<double>(2)[1];
   double r33 = RoteM.ptr<double>(2)[2];
@@ -219,4 +219,4 @@ cv::Point3f PNPSolver::ImageFrame2CameraFrame(cv::Point2f p, double F) {
 //          << "    相机旋转=" << p4psolver.Theta_W2C << endl;
 
 //   return 0;
-// }
+// }Solve

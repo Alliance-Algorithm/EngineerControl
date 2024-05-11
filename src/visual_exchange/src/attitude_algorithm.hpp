@@ -38,7 +38,6 @@ class AttitudeAlgorithm {
 public:
   AttitudeAlgorithm() : camera_points_(4), world_points_(4), pnpsolver() {
     //初始化相机参数
-
     pnpsolver.SetCameraMatrix(1.722231837421459e+03, 1.724876404292754e+03,
                               7.013056440882832e+02, 5.645821718351237e+02);
     //设置畸变参数
@@ -178,8 +177,6 @@ private:
     cv::imshow("horns", original);
     cv::waitKey(1);
 #endif
-    cv::imshow("horns", original);
-    cv::waitKey(1);
   }
   void pnpSolve() {
     pnpsolver.Points2D = camera_points_;

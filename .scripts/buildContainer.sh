@@ -1,2 +1,2 @@
 unison -batch /workspaces/Engineer_Visual/deploy ssh://alliance@10.147.20.5//home/alliance/deploy
-ssh -t alliance@10.147.20.5 "cd deploy;sudo docker container stop deploy_yu_heng_n_n && sudo docker container rm deploy_yu_heng_n_n;sudo docker image rm deploy_yu_heng_n_n;sudo docker build -f Dockerfile -t deploy_yu_heng_n_n ./"
+ssh -t alliance@10.147.20.5 "cd deploy;sudo docker container stop deploy_yu_heng_n_n && sudo docker container rm deploy_yu_heng_n_n;sudo docker image rm deploy_yu_heng_n_n;sudo docker build -f Dockerfile -t deploy_yu_heng_n_n ."

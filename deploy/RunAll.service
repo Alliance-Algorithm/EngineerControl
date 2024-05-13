@@ -1,0 +1,9 @@
+[Unit]
+Description=run-all
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/RunAll.sh
+
+[Install]
+WantedBy=multi-user.target

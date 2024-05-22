@@ -1,1 +1,0 @@
-ssh -t alliance@10.147.20.5 "sudo docker container stop deploy_yu_heng_n_n && sudo docker container rm deploy_yu_heng_n_n"
